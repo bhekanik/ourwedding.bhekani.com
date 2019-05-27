@@ -15,7 +15,7 @@ const Intro = () => {
       </div>
       <div className="intro-middle">
         <h2>{"Join Us!"}</h2>
-        <p>{"We are excited to invite you to join us as we begin building our new future together. Each one of you plays a unique role in our lives, sharing with us memories we will always treasure. So we hope you can join us for yet another unforgettable moment, as we exchange vows and make a lasting commitment to one another. Wedding details: Date: 06 October 2019 | Time: 10:00Hrs | Ceremony: Selbourne Park Seventh-Day Adventist Church | Reception: TBA"}</p>
+        <p>{"We are excited to invite you to join us as we begin building our new future together. Each one of you plays a unique role in our lives, sharing with us memories we will always treasure. So we hope you can join us for yet another unforgettable moment, as we exchange vows and make a lasting commitment to one another."}</p>
         <div className="intro-social">
           <div className="intro-social-icons">
             <a

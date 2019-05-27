@@ -43,7 +43,7 @@ const Contact = () => {
         </label>
 
         <label className="message">
-          Message:
+          Leave a message for the couple:
           <textarea name="message" id="message" required />
         </label>
 

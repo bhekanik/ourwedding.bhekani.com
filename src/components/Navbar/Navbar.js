@@ -21,11 +21,11 @@ const Navbar = props => {
             Details
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link style={{ color: linkColor }} to="/projects">
             Photos
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link style={{ color: linkColor }} to="/contact">
             RSVP
