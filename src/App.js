@@ -34,7 +34,7 @@ const appReducer = (state, action) => {
 
 const App = () => {
   const [state, dispatch] = useReducer(appReducer, {
-    navbackgroundColor: "transparent",
+    navbackgroundColor: "rgba(0,0,0,0.3)",
     linkColor: "#e8e9eb",
     boxShadow: "none",
     page: "home"
@@ -55,6 +55,7 @@ const App = () => {
           <Route path="/contact" component={Contact} />
           <Route path="/success" component={Success} />
         </Switch>
+        <div className="footer-spacer"></div>
         <Footer />
       </div>
     </Context.Provider>

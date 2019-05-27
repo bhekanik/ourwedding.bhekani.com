@@ -20,7 +20,7 @@ const Home = props => {
         dispatch({
           type: "nav",
           payload: {
-            navBackgroundColor: "transparent",
+            navBackgroundColor: "rgba(0,0,0,0.3)",
             linkColor: "#e8e9eb",
             boxShadow: "none"
           }

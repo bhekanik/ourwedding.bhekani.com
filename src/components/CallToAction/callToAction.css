@@ -1,7 +1,7 @@
 .cta {
   text-align: center;
   padding: 5em 0;
-  background: #606060;
+  background: var(--clr-background-dark);
   color: #e8e9eb;
 
   display: flex;
@@ -19,7 +19,7 @@
   text-decoration: none;
   margin-top: 1em;
   background: transparent;
-  border: 3px solid #03afc2;
+  border: 3px solid var(--clr-accent);
   font-size: 1.5rem;
   letter-spacing: 0.1em;
   color: white;
@@ -33,8 +33,8 @@
 }
 
 .cta a:hover {
-  background: #03afc2;
-  color: white;
+  background: var(--clr-accent);
+  color: var(--clr-text-dark);
 }
 
 .cta a:active {

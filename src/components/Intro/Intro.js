@@ -2,12 +2,8 @@ import React from "react";
 
 import "./intro.css";
 
-import introLeft from "../../img/intro-left.jpg";
-import introRight from "../../img/intro-right.jpg";
-
 import facebookLogo from "../../img/facebook.png";
 import instagramLogo from "../../img/instagram.png";
-import linkedinLogo from "../../img/linkedin.png";
 import twitterLogo from "../../img/twitter.png";
 import youtubeLogo from "../../img/youtube.png";
 
@@ -15,7 +11,7 @@ const Intro = () => {
   return (
     <section className="intro">
       <div className="intro-left">
-        <img src={introLeft} alt="" />
+        <img src="https://lh3.googleusercontent.com/ueFxRkPFR-9X7HBylvs5H5KCNHsWvZhyWGpL9xLXD2t1z9tzrrv6aG0_rDDJ51uFn3LxBar1JHU2EJ8PDXSgKtT3yr7Fi66vHa_M2610s6k01_ptffVf-Fs8q4trES4Ikc3U6cjIBzU=w2400" alt="portfolio-item" alt="" />
       </div>
       <div className="intro-middle">
         <h2>{"Join Us!"}</h2>
@@ -36,13 +32,6 @@ const Intro = () => {
               rel="noopener noreferrer">
               <img src={instagramLogo} alt="" />
             </a>
-            {/* <a
-              className="intro-social-icon linkedin"
-              href="https://www.linkedin.com/in/bhekanik/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src={linkedinLogo} alt="" target="_blank" />
-            </a> */}
             <a
               className="intro-social-icon"
               href="https://twitter.com/justlivinlifepc"
@@ -61,7 +50,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="intro-right">
-        <img src={introRight} alt="" />
+        <img src="https://lh3.googleusercontent.com/cY-0u52wrYxyLuAqAR9tYLoaholjXjxLoDjgxjPmTtzrwT4POUNosKYAzO_Sfo5iOTcBe4YZbZc6Y9OjJcqmkxiSmkntFn7Kbu3pXj-tDDmfOIlc5E1ggVquPMA9y5kmkX3aWhLhOtA=w2400" alt="" />
       </div>
     </section>
   );

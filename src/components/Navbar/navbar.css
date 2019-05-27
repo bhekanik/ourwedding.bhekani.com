@@ -28,7 +28,7 @@ nav ul {
 }
 
 .navbar li:hover {
-  background: rgb(3, 175, 194);
+  background: var(--clr-primary);
 }
 
 .navbar li:hover a {
