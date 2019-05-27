@@ -25,7 +25,8 @@ const Contact = () => {
         name="contact"
         method="POST"
         netlify-honeypot="bot-field"
-        data-netlify="true">
+        data-netlify="true"
+        netlify>
         <p style={{ display: "none" }}>
           <label>
             Don’t fill this out if you're human: <input name="bot-field" />
