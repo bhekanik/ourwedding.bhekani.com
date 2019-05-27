@@ -22,11 +22,11 @@ const Contact = () => {
     <section className="contact" id="contact">
       <h1>RSVP</h1>
       <form
-        name="contact"
+        name="rsvp"
         method="POST"
         netlify-honeypot="bot-field"
         data-netlify="true"
-        netlify>
+        action="/success">
         <p style={{ display: "none" }}>
           <label>
             Don’t fill this out if you're human: <input name="bot-field" />
