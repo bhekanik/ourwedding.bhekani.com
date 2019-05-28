@@ -72,7 +72,7 @@ textarea {
   margin-top: 1em;
   margin-left: auto;
   background: transparent;
-  border: 3px solid #03afc2;
+  border: 3px solid var(--clr-accent);
   font-size: 2rem;
   letter-spacing: 0.15em;
   color: #223843;
@@ -85,8 +85,8 @@ textarea {
 }
 
 .button:hover {
-  background: #03afc2;
-  color: white;
+  background: var(--clr-accent);
+  color: var(--clr-text-dark);
 }
 
 .button:active {

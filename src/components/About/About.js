@@ -57,16 +57,27 @@ const About = () => {
 
               <div className="details__bridesmaids">
                 <div className="subtitle">
+                  <p>The Maids of Honor</p>
+                </div>
+
+                <div className="desc">
+                  <p><span>Nomtha</span> - Bride's literal day-one and ride or die. The one who would move heaven and earth to see the bride smile. The sister.</p>
+                  <p><span>Nkazie</span> - Groom's kidney donor, gotta keep this one alive and healthy for the groom's sake. She's full to the bream with personality and can challenge the bride on knowledge about the groom.</p>
+                </div>
+              </div>
+
+              <div className="details__bridesmaids">
+                <div className="subtitle">
                   <p>The Bridesmaids</p>
                 </div>
 
                 <div className="desc">
-                  <p><span>Nozi</span> - Bride's younger sister</p>
-                  <p><span>Thandanani</span> - Bride's older sister</p>
-                  <p><span>Thando</span> - Bride's childhood friend</p>
-                  <p><span>Lucinda</span> - Bride's childhood friend</p>
-                  <p><span>Stella</span> - Bride's close friend</p>
-                  <p><span>Sineke</span> - Bride's close friend</p>
+                  <p><span>Nozi</span> - Bride's favorite and bubliest young sister, the best lady</p>
+                  <p><span>Thandanani</span> - Bride's most fun and entertaining older sister</p>
+                  <p><span>Valentine</span> - Bride's multitalented aka "gifted-hands" and quiet cousin</p>
+                  <p><span>Thando</span> - Bride's highschool roommate, turned friend, turned sister - the hype lady</p>
+                  <p><span>Sineke</span> - Bride's gracious and classy high school friend</p>
+                  <p><span>Nothabo</span> - Bride's quiet, level-headed childhood turned highschool friend</p>
                 </div>
               </div>
 
@@ -78,15 +89,15 @@ const About = () => {
                 <div className="desc">
                   <p>
                     <span>Cedric</span> - Groom's longtime friend, close confidante
-                    and the best man.
+                    and the best man. Keeper of all the stories that must not be told.
                   </p>
                   <p>
-                    <span>Mbeko</span> - Groom's longtime friend and high school roommate. 
+                    <span>Mbeko</span> - Groom's longtime friend and high school roommate turned brother. Started together at the bottom, the Relevance representative.
                   </p>
-                  <p><span>Jabu</span> - Groom's close friend from the trenches at NUST.</p>
-                  <p><span>Dylan</span> - Groom's longtime friend. Fellow groomsman with the groom at way too many weddings.</p>
-                  <p><span>Dalumuzi</span> - Groom's longtime friend, 1000s of hours were spent together in high school.</p>
-                  <p><span>Panashe</span> - Groom's close friend with whom countless debates have been had about the NBA, DC and Marvel.</p>
+                  <p><span>Jabu</span> - Groom's close friend. From hackathons to LAN parties to startups. The one who represents the groom's geek side.</p>
+                  <p><span>Dylan</span> - Groom's longtime friend. Been fellow groomsman with the groom at way too many weddings, he should get married next.</p>
+                  <p><span>Dalumuzi</span> - Groom's longtime friend, 1000s of hours were spent together in high school. Groom wouldn't have passed in highschool without his influence.</p>
+                  <p><span>Panashe</span> - Groom's close friend with whom countless debates have been had about the NBA, DC and Marvel. Another one of the geeks.</p>
                 </div>
               </div>
 

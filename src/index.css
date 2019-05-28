@@ -44,7 +44,7 @@ p {
 }
 
 h1 {
-  color: #03afc2;
+  color: var(--clr-text-dark);
   line-height: 1;
   font-size: 3.125rem;
 }
