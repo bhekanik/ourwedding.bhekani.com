@@ -48,7 +48,7 @@ span {
 }
 
 span a {
-  color: var(--clr-text-main);
+  color: var(--clr-text-dark);
 }
 
 .subtitle p {
