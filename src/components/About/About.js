@@ -61,7 +61,7 @@ const About = () => {
                 </div>
 
                 <div className="desc">
-                  <p><span>Nomtha</span> - Bride's literal day-one and ride or die. The one who would move heaven and earth to see the bride smile. The sister.</p>
+                  <p><span>Nomtha</span> - Bride's literal day-one and ride or die. The one who would move heaven and earth to see the bride smile. The funniest one in the family and the best story teller. The sister.</p>
                   <p><span>Nkazie</span> - Groom's kidney donor, gotta keep this one alive and healthy for the groom's sake. She's full to the bream with personality and can challenge the bride on knowledge about the groom.</p>
                 </div>
               </div>
@@ -72,8 +72,8 @@ const About = () => {
                 </div>
 
                 <div className="desc">
-                  <p><span>Nozi</span> - Bride's favorite and bubliest young sister, the best lady</p>
-                  <p><span>Thandanani</span> - Bride's most fun and entertaining older sister</p>
+                  <p><span>Nozi</span> - Bride's favorite and bubbliest young sister, always has her sister's back. The best lady</p>
+                  <p><span>Thandanani</span> - Bride's most fun and entertaining older sister, the life of the party</p>
                   <p><span>Valentine</span> - Bride's multitalented aka "gifted-hands" and quiet cousin</p>
                   <p><span>Thando</span> - Bride's highschool roommate, turned friend, turned sister - the hype lady</p>
                   <p><span>Sineke</span> - Bride's gracious and classy high school friend</p>
