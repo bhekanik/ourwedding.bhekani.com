@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 
 import "./contact.css";
 import { Context } from "../../App";
@@ -24,15 +25,16 @@ const Contact = () => {
       <form
         name="rsvp"
         method="POST"
-        netlify-honeypot="bot-field"
-        netlify
-        action="./success"
-        data-netlify-recaptcha="true">
-        <p style={{ display: "none" }}>
+        // netlify-honeypot="bot-field"
+        data-netlify="true"
+        action="/success"
+        data-netlify-recaptcha="true"
+        >
+        {/* <p style={{ display: "none" }}>
           <label>
             Don’t fill this out if you're human: <input name="bot-field" />
           </label>
-        </p>
+        </p> */}
 
         <label className="name">
           Name:
@@ -55,7 +57,9 @@ const Contact = () => {
         </label>
 
         <div data-netlify-recaptcha="true"></div>
-        <button className="button form-button" type="submit">Send</button>
+          <button className="button form-button" type="submit">
+            Send
+          </button>
       </form>
     </section>
   );
