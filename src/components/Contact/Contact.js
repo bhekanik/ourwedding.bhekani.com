@@ -63,7 +63,7 @@ const Contact = (props) => {
         name="rsvp"
         method="POST"
         action="/success"
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         >
         <input type="hidden" name="form-name" value="rsvp" />
         <input type="hidden" name="bot-field" />
