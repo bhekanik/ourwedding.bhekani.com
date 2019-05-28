@@ -27,6 +27,14 @@ const appReducer = (state, action) => {
         linkColor: action.payload.linkColor,
         boxShadow: action.payload.boxShadow
       };
+    case "form":
+      return {
+        ...state,
+        name: action.payload.name,
+        email: action.payload.email,
+        number: action.payload.number,
+        message: action.payload.message
+      };
     default:
       return state;
   }
@@ -37,7 +45,11 @@ const App = () => {
     navbackgroundColor: "rgba(0,0,0,0.3)",
     linkColor: "#e8e9eb",
     boxShadow: "none",
-    page: "home"
+    page: "home", 
+    name: "", 
+    email: "", 
+    number: "", 
+    message: ""
   });
 
   return (
@@ -52,7 +64,7 @@ const App = () => {
           <Route exact path="/" render={() => <Home page={state.page} />} />
           <Route path="/about" component={About} />
           <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/contact" render={() => <Contact name={state.name} email={state.email} number={state.number} message={state.message}/>} />
           <Route path="/success" component={Success} />
         </Switch>
         <div className="footer-spacer"></div>
