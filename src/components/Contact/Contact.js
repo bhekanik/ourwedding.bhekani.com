@@ -26,7 +26,8 @@ const Contact = () => {
         method="POST"
         netlify-honeypot="bot-field"
         data-netlify="true"
-        action="/success">
+        action="./success"
+        data-netlify-recaptcha="true">
         <p style={{ display: "none" }}>
           <label>
             Don’t fill this out if you're human: <input name="bot-field" />
@@ -43,12 +44,18 @@ const Contact = () => {
           <input type="email" id="email" name="email" required />
         </label>
 
+        <label className="number">
+          Number of guests:
+          <input type="number" id="number" name="number" required />
+        </label>
+
         <label className="message">
           Leave a message for the couple:
           <textarea name="message" id="message" required />
         </label>
 
-        <input className="button form-button" type="submit" value="SEND" />
+        <div data-netlify-recaptcha="true"></div>
+        <button className="button form-button" type="submit">Send</button>
       </form>
     </section>
   );

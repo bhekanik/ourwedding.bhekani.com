@@ -22,6 +22,7 @@ form {
       grid-column-gap: 1em;
       grid-template-areas:
         "name    email"
+        "number number"
         "message message"
         "   .    button";
     }
@@ -32,6 +33,10 @@ form {
 
     form .email {
       grid-area: email;
+    }
+
+    form .number {
+      grid-area: number;
     }
 
     form .message {
