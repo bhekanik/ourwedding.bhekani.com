@@ -25,7 +25,7 @@ const Contact = () => {
         name="rsvp"
         method="POST"
         netlify-honeypot="bot-field"
-        data-netlify="true"
+        netlify
         action="./success"
         data-netlify-recaptcha="true">
         <p style={{ display: "none" }}>
