@@ -51,7 +51,7 @@ const Contact = () => {
 
         <label className="message">
           Leave a message for the couple:
-          <textarea name="message" id="message" required />
+          <textarea name="message" id="message" rows="4" required />
         </label>
 
         <div data-netlify-recaptcha="true"></div>
