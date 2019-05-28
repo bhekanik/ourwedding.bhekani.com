@@ -47,10 +47,10 @@ const About = () => {
                 <div className="desc">
                   <p>
                     <span>Ceremony</span> Selbourne Park SDA Church, Cnr Gwanda Road &
-                    Cecil Avenue, Bulawayo
+                    Cecil Avenue, Bulawayo | 10:00am
                   </p>
                   <p>
-                    <span>Reception</span> Mystique Weddings & Conferences, Mariot Road, Four Winds, Bulawayo
+                    <span>Reception</span> Mystique Weddings & Conferences, Mariot Road, Four Winds, Bulawayo | 2:00pm
                   </p>
                 </div>
               </div>
