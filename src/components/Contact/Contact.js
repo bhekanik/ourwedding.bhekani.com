@@ -59,11 +59,11 @@ const Contact = (props) => {
       <h1>RSVP</h1>
       <form
         name="rsvp"
-        // method="POST"
-        // netlify-honeypot="bot-field"
-        // data-netlify="true"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
         // action="/success"
-        // data-netlify-recaptcha="true"
+        data-netlify-recaptcha="true"
         onSubmit={handleSubmit}
         >
         <input type="hidden" name="form-name" value="rsvp" />
