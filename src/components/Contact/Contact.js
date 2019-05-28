@@ -33,7 +33,7 @@ const Contact = (props) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "rsvp", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Successful submission!"))
       .catch(error => alert(error));
 
     e.preventDefault();
