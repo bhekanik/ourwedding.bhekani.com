@@ -31,7 +31,13 @@ const Contact = (props) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "rsvp", ...this.state })
+      body: encode({ 
+        "form-name": "rsvp", 
+        name, 
+        email, 
+        number, 
+        message
+      })
     })
       .then(() => alert("Successful submission!"))
       .catch(error => alert(error));
