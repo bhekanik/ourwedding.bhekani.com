@@ -27,12 +27,24 @@ const appReducer = (state, action) => {
         linkColor: action.payload.linkColor,
         boxShadow: action.payload.boxShadow
       };
-    case "form":
+    case "name":
       return {
         ...state,
-        name: action.payload.name,
-        email: action.payload.email,
-        number: action.payload.number,
+        name: action.payload.name
+      };
+    case "email":
+      return {
+        ...state,
+        email: action.payload.email
+      };
+    case "number":
+      return {
+        ...state,
+        number: action.payload.number
+      };
+    case "message":
+      return {
+        ...state,
         message: action.payload.message
       };
     default:

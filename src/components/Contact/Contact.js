@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./contact.css";
 import { Context } from "../../App";
+import { statement } from "@babel/template";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -28,6 +29,7 @@ const Contact = (props) => {
   }, []);
 
   const handleSubmit = e => {
+    console.log(props);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -39,7 +41,7 @@ const Contact = (props) => {
         message
       })
     })
-      .then(() => alert("Successful submission!"))
+      .then(() => alert("Success!"))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -47,7 +49,7 @@ const Contact = (props) => {
 
   const handleChange = e => {
     dispatch({
-      type: "form",
+      type: e.target.name,
       payload: {
         [e.target.name]: e.target.value,
       }
@@ -67,7 +69,7 @@ const Contact = (props) => {
         <input type="hidden" name="bot-field" />
 
         <label className="name">
-          Name:
+          Name:{name}
           <input type="text" id="name" name="name" value={name} onChange={handleChange} required />
         </label>
 
