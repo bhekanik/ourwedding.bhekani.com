@@ -25,16 +25,12 @@ const Contact = () => {
       <form
         name="rsvp"
         method="POST"
-        // netlify-honeypot="bot-field"
+        netlify-honeypot="bot-field"
         data-netlify="true"
         action="/success"
         data-netlify-recaptcha="true"
         >
-        {/* <p style={{ display: "none" }}>
-          <label>
-            Don’t fill this out if you're human: <input name="bot-field" />
-          </label>
-        </p> */}
+        <input type="hidden" name="bot-field" />
 
         <label className="name">
           Name:
