@@ -32,7 +32,7 @@ const Contact = () => {
         <input type="hidden" name="bot-field" />
 
         <label className="name">
-          Name:{name}
+          Name:
           <input type="text" id="name" name="name" required />
         </label>
 
