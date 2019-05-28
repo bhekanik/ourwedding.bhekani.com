@@ -145,8 +145,7 @@ const About = () => {
                     you don't have to ;). Feel free to take pictures at the reception, as long as you don't get in the way of the proceedings. And remember to share them on social media using the wedding hashtag, we'd love to relive the wedding from various points of view. 
                   </p>
                   <p>
-                    <span>What's the dress code?</span> Smart casual or formal. Dress
-                    comfortably.
+                    <span>What's the dress code?</span> Modest and elegant.
                   </p>
                   <p>
                     <span>Can I bring a date?</span> Yeah sure, you're welcome to
