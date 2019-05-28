@@ -22,29 +22,33 @@ const Intro = () => {
               className="intro-social-icon"
               href="https://www.facebook.com/justlivinlife"
               target="_blank"
-              rel="noopener noreferrer">
-              <img src={facebookLogo} alt="" target="_blank" />
+              rel="noopener noreferrer"
+              alt="Link to Facebook profile">
+              <img src={facebookLogo} alt="Facebook Icon" />
             </a>
             <a
               className="intro-social-icon"
               href="https://instagram.com/justlivinlifeonig"
               target="_blank"
-              rel="noopener noreferrer">
-              <img src={instagramLogo} alt="" />
+              rel="noopener noreferrer"
+              alt="Link to Instagram profile">
+              <img src={instagramLogo} alt="Instagram Icon" />
             </a>
             <a
               className="intro-social-icon"
               href="https://twitter.com/justlivinlifepc"
               target="_blank"
-              rel="noopener noreferrer">
-              <img src={twitterLogo} alt="" />
+              rel="noopener noreferrer"
+              alt="Link to Twitter profile">
+              <img src={twitterLogo} alt="Twitter Icon" />
             </a>
             <a
               className="intro-social-icon"
               href="https://www.youtube.com/channel/UCNNaw5_xYuNle7jUU5Y8mmQ"
               target="_blank"
-              rel="noopener noreferrer">
-              <img src={youtubeLogo} alt="" />
+              rel="noopener noreferrer"
+              alt="Link to Youtube profile">
+              <img src={youtubeLogo} alt="Youtube Icon" />
             </a>
           </div>
         </div>
