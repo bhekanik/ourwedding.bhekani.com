@@ -101,6 +101,7 @@
 
 .tech p {
   max-width: 70vw;
+  color: var(--clr-text-dark)
 }
 
 @media (min-width: 50em) {

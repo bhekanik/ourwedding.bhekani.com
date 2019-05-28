@@ -3,6 +3,8 @@ import React, { useEffect, useContext } from "react";
 import CallToAction from "../CallToAction/CallToAction";
 import { Context } from "../../App";
 
+import wrapistryLogo from "../../img/wrapistry.svg";
+
 import "./about.css";
 
 const About = () => {
@@ -72,8 +74,8 @@ const About = () => {
                 </div>
 
                 <div className="desc">
-                  <p><span>Nozi</span> - Bride's favorite and bubbliest young sister, always has her sister's back. The best lady</p>
-                  <p><span>Thandanani</span> - Bride's most fun and entertaining older sister, the life of the party</p>
+                  <p><span>Nozie</span> - Bride's favorite and bubbliest young sister, always has her sister's back. The best lady</p>
+                  <p><span>Thandie</span> - Bride's most fun and entertaining older sister, the life of the party</p>
                   <p><span>Valentine</span> - Bride's multitalented aka "gifted-hands" and quiet cousin</p>
                   <p><span>Thando</span> - Bride's highschool roommate, turned friend, turned sister - the hype lady</p>
                   <p><span>Sineke</span> - Bride's gracious and classy high school friend</p>
@@ -106,8 +108,18 @@ const About = () => {
                   <p>Wedding Registry</p>
                 </div>
 
-                <div className="desc">
-                  <p>We have set up a wedding gift registry for those who would like to celebrate the occassion with a gift but aren't sure what to choose or won't be able to make it for the wedding in person. You can find our wedding registry at <span><a href="https://wrapistry.shop/giftregistry/?giftregistry_id=1393" target="_blank">BK and Nobue's Wedding Registry.</a></span></p>
+                <div className="registry-desc desc">
+                  <p>
+                    We have set up a wedding gift registry for those who would like to celebrate the occassion with a gift but aren't sure what to choose or won't be able to make it for the wedding in person. You can find our wedding registry by clicking the image below: 
+                  </p>
+                  <div>
+                    <a href="https://wrapistry.shop/giftregistry/?giftregistry_id=1393" target="_blank" rel="noopener noreferrer">
+                    <figure className="registry-figure">
+                      <img className="registry-img" src={wrapistryLogo} alt="Wrapistry Logo"></img>
+                      <figcaption className="registry-img-caption">BK and Nobue's Wedding Registry</figcaption>
+                    </figure>  
+                    </a>
+                  </div>
                 </div>
               </div>
 
