@@ -14,7 +14,9 @@ const Contact = () => {
       type: "nav",
       payload: {
         navBackgroundColor: "white",
-        linkColor: "#223843",
+        contactLinkColor: "#e8e9eb",
+        homeLinkColor: "#223843",
+        detailsLinkColor: "#223843",
         boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
       }
     });

@@ -21,7 +21,9 @@ const Home = props => {
           type: "nav",
           payload: {
             navBackgroundColor: "rgba(0,0,0,0.3)",
-            linkColor: "#e8e9eb",
+            homeLinkColor: "#e8e9eb",
+            detailsLinkColor: "#e8e9eb",
+            contactLinkColor: "#e8e9eb",
             boxShadow: "none"
           }
         });
@@ -30,7 +32,6 @@ const Home = props => {
           type: "nav",
           payload: {
             navBackgroundColor: "white",
-            linkColor: "#223843",
             boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
           }
         });
@@ -40,7 +41,6 @@ const Home = props => {
         type: "nav",
         payload: {
           navBackgroundColor: "white",
-          linkColor: "#223843",
           boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
         }
       });
