@@ -61,6 +61,26 @@ const About = () => {
 
               <div className="details__bridesmaids">
                 <div className="subtitle">
+                  <p>Wedding Registry</p>
+                </div>
+
+                <div className="registry-desc desc">
+                  <p>
+                    We have set up a wedding gift registry for those who would like to celebrate the occassion with a gift but aren't sure what to choose or won't be able to make it for the wedding in person. You can find our wedding registry by clicking the image below: 
+                  </p>
+                  <div>
+                    <a href="https://wrapistry.shop/giftregistry/?giftregistry_id=1393" target="_blank" rel="noopener noreferrer">
+                    <figure className="registry-figure">
+                      <img className="registry-img" src={wrapistryLogo} alt="Wrapistry Logo"></img>
+                      <figcaption className="registry-img-caption">BK and Nobue's Wedding Registry</figcaption>
+                    </figure>  
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="details__bridesmaids">
+                <div className="subtitle">
                   <p>The Maids of Honor</p>
                 </div>
 
@@ -102,26 +122,6 @@ const About = () => {
                   <p><span>Dylan</span> - Groom's longtime friend. Been fellow groomsman with the groom at way too many weddings, he should get married next.</p>
                   <p><span>Dalumuzi</span> - Groom's longtime friend, 1000s of hours were spent together in high school. Groom wouldn't have passed in highschool without his influence.</p>
                   <p><span>Panashe</span> - Groom's close friend with whom countless debates have been had about the NBA, DC and Marvel. Another one of the geeks.</p>
-                </div>
-              </div>
-
-              <div className="details__bridesmaids">
-                <div className="subtitle">
-                  <p>Wedding Registry</p>
-                </div>
-
-                <div className="registry-desc desc">
-                  <p>
-                    We have set up a wedding gift registry for those who would like to celebrate the occassion with a gift but aren't sure what to choose or won't be able to make it for the wedding in person. You can find our wedding registry by clicking the image below: 
-                  </p>
-                  <div>
-                    <a href="https://wrapistry.shop/giftregistry/?giftregistry_id=1393" target="_blank" rel="noopener noreferrer">
-                    <figure className="registry-figure">
-                      <img className="registry-img" src={wrapistryLogo} alt="Wrapistry Logo"></img>
-                      <figcaption className="registry-img-caption">BK and Nobue's Wedding Registry</figcaption>
-                    </figure>  
-                    </a>
-                  </div>
                 </div>
               </div>
 
