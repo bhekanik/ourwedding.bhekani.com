@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 
 import Intro from "../Intro/Intro";
 import CallToAction from "../CallToAction/CallToAction";
+import Countdown from "../Countdown/Countdown";
 import { Context } from "../../App";
 
 import "./home.css";
@@ -99,14 +100,15 @@ const Home = props => {
   return (
     <>
       <div className="welcome parallax--bg" id="home">
-        <h1>
-          <span>{"BK Weds Nobue"}</span>
-          <p>
+        <div className="welcome__label">
+          <span className="welcome__title">{"#BKWedsNobue"}</span>
+          <p className="tagline">
             {
               "Our love is forever, always has been and always will be."
             }
           </p>
-        </h1>
+          <Countdown />
+        </div>
         <img
           className="welcome-down"
           src={arrow}
