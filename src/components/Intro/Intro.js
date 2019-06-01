@@ -16,6 +16,7 @@ const Intro = () => {
       <div className="intro-middle">
         <h2>{"Join Us!"}</h2>
         <p>{"We are excited to invite you to join us as we begin building our new future together. Each one of you plays a unique role in our lives, sharing with us memories we will always treasure. So we hope you can join us for yet another unforgettable moment, as we exchange vows and make a lasting commitment to one another."}</p>
+        <p style={{color: "#e8e9eb"}}>{"#BKWedsNobue"}</p>
         <div className="intro-social">
           <div className="intro-social-icons">
             <a
