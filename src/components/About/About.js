@@ -66,7 +66,7 @@ const About = () => {
 
                 <div className="registry-desc desc">
                   <p>
-                    We have set up a wedding gift registry for those who would like to celebrate the occassion with a gift but aren't sure what to choose or won't be able to make it for the wedding in person. You can find our wedding registry by clicking the image below: 
+                    We have set up a gift registry for those who would like to celebrate the occassion with a gift but won't be able to make it for the wedding in person. You can find our gift registry by clicking the image below: 
                   </p>
                   <div>
                     <a href="https://wrapistry.shop/giftregistry/?giftregistry_id=1393" target="_blank" rel="noopener noreferrer">
