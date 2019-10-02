@@ -24,7 +24,8 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <h1>RSVP</h1>
-      <form
+      <h2>The form has been closed</h2>
+      {/* <form
         name="rsvp"
         method="POST"
         action="/success"
@@ -55,7 +56,7 @@ const Contact = () => {
         <button className="button form-button" type="submit">
           Send
         </button>
-      </form>
+      </form> */}
     </section>
   );
 };
