@@ -1,10 +1,8 @@
-import React, { useEffect, useContext, Suspense } from "react";
-
-import "./projects.css";
-
+import React, { Suspense, useContext, useEffect } from "react";
 import { Context } from "../../App";
 import projects from "../../projects/projects";
 import CallToAction from "../CallToAction/CallToAction";
+import "./projects.css";
 
 const Project = React.lazy(() => import("./Project/Project"));
 
@@ -18,10 +16,10 @@ const Projects = () => {
       payload: {
         navBackgroundColor: "white",
         linkColor: "#223843",
-        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
-      }
+        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
+      },
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -29,7 +27,7 @@ const Projects = () => {
         <h1>Some of my work</h1>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="portfolio-items">
-            {projects.map(project => {
+            {projects.map((project) => {
               return (
                 <Project
                   key={project.key}
