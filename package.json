@@ -28,5 +28,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/helper-call-delegate": "^7.12.13",
+    "@babel/helper-define-map": "^7.15.4",
+    "@babel/helper-regex": "^7.10.5"
   }
 }
