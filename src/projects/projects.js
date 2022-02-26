@@ -1,4 +1,4 @@
-export default [
+const projects = [
   {
     key: 1,
     name: "My Website",
@@ -54,3 +54,5 @@ export default [
     codeAvailable: true
   }
 ];
+
+export default projects
