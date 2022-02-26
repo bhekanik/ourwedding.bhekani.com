@@ -32,6 +32,8 @@ const Countdown = () => {
         countdown.innerHTML = "It is here!";
       }
     }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return <div className="countdown"></div>;
