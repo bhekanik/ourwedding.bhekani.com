@@ -99,7 +99,7 @@ const Home = (props) => {
     <>
       <div className="welcome parallax--bg" id="home">
         <div className="welcome__label">
-          <span className="welcome__title">{"#BKWedsNobue"}</span>
+          <span className="welcome__title">{"#JustLivinLife"}</span>
           <p className="tagline">
             {"Our love is forever, always has been and always will be."}
           </p>
