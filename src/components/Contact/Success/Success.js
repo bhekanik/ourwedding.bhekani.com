@@ -1,9 +1,7 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-import "./success.css";
-
 import { Context } from "../../../App";
+import "./success.css";
 
 const Success = () => {
   const dispatch = useContext(Context);
@@ -15,16 +13,17 @@ const Success = () => {
       payload: {
         navBackgroundColor: "white",
         linkColor: "#223843",
-        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
-      }
+        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
+      },
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="success">
       <h1 className="success__heading">Success</h1>
       <p className="success__desc">
-        Thank you, we look forward to seeing you at the wedding. if you need to know more details about the wedding, click the link below.
+        Thank you, we look forward to seeing you at the wedding. if you need to
+        know more details about the wedding, click the link below.
       </p>
       <Link to="/about">Details</Link>
     </div>
