@@ -6,7 +6,8 @@
   /* background: var(--clr-background-dark); */
 }
 
-.contact h1 {
+.contact h1,
+.contact h2 {
   text-align: center;
 }
 
@@ -21,10 +22,10 @@ form {
       display: grid;
       grid-column-gap: 1em;
       grid-template-areas:
-        "name    email"
-        "number number"
-        "message message"
-        "   .    button";
+        'name    email'
+        'number number'
+        'message message'
+        '   .    button';
     }
 
     form .name {
@@ -83,7 +84,7 @@ textarea {
   color: #223843;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
   padding: 0.5em 1.5em;
   cursor: pointer;

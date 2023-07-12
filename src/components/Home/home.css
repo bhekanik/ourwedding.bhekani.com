@@ -4,7 +4,7 @@
 .welcome {
   background: var(--clr-primary);
   background-image: linear-gradient(to top left, #404040, #021823);
-  background-image: url("https://lh3.googleusercontent.com/SijQxfArWyJ08ItELDaAAdD8XPWkifcwSpHEFpTsyw-TOByBFQPuz33-UGptdeqW-Y4fyer-JjHfp6U6tA6GwsEiJAJyfw5NZGrN26Bz4NzgaWpTgeLvb-7sxRwASajTR6VW22FsfuU=w2400");
+  background-image: url("us.jpeg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -22,7 +22,7 @@
   line-height: 2;
   text-align: center;
   width: 90vw;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 30px -5px black;
   display: flex;
   flex-direction: column;
@@ -105,7 +105,7 @@
 
 .tech p {
   max-width: 70vw;
-  color: var(--clr-text-dark)
+  color: var(--clr-text-dark);
 }
 
 @media (min-width: 50em) {

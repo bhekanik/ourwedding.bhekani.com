@@ -1,15 +1,12 @@
 import React, { useContext, useEffect } from "react";
-
-import Intro from "../Intro/Intro";
+import { Context } from "../../App";
+import arrow from "../../img/arrow.svg";
 import CallToAction from "../CallToAction/CallToAction";
 import Countdown from "../Countdown/Countdown";
-import { Context } from "../../App";
-
+import Intro from "../Intro/Intro";
 import "./home.css";
 
-import arrow from "../../img/arrow.svg";
-
-const Home = props => {
+const Home = (props) => {
   const dispatch = useContext(Context);
 
   const changeNavStyle = () => {
@@ -25,16 +22,16 @@ const Home = props => {
             homeLinkColor: "#e8e9eb",
             detailsLinkColor: "#e8e9eb",
             contactLinkColor: "#e8e9eb",
-            boxShadow: "none"
-          }
+            boxShadow: "none",
+          },
         });
       } else {
         dispatch({
           type: "nav",
           payload: {
             navBackgroundColor: "white",
-            boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
-          }
+            boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
+          },
         });
       }
     } else {
@@ -42,8 +39,8 @@ const Home = props => {
         type: "nav",
         payload: {
           navBackgroundColor: "white",
-          boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
-        }
+          boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
+        },
       });
     }
   };
@@ -59,6 +56,7 @@ const Home = props => {
     return () => {
       window.removeEventListener("scroll", changeNavStyle);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const smoothScroll = (targetSelector, duration) => {
@@ -74,7 +72,7 @@ const Home = props => {
     const distance = getTargetPosition();
     let startTime = null;
 
-    const animation = currentTime => {
+    const animation = (currentTime) => {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const run = ease(timeElapsed, startPosition, distance, duration);
@@ -101,11 +99,9 @@ const Home = props => {
     <>
       <div className="welcome parallax--bg" id="home">
         <div className="welcome__label">
-          <span className="welcome__title">{"#BKWedsNobue"}</span>
+          <span className="welcome__title">{"#JustLivinLife"}</span>
           <p className="tagline">
-            {
-              "Our love is forever, always has been and always will be."
-            }
+            {"Our love is forever, always has been and always will be."}
           </p>
           <Countdown />
         </div>

@@ -1,10 +1,8 @@
-import React, { useEffect, useContext } from "react";
-
-import "./contact.css";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../App";
+import "./contact.css";
 
 const Contact = () => {
-
   const dispatch = useContext(Context);
 
   useEffect(() => {
@@ -16,15 +14,16 @@ const Contact = () => {
         contactLinkColor: "#e8e9eb",
         homeLinkColor: "#223843",
         detailsLinkColor: "#223843",
-        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)"
-      }
+        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
+      },
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <section className="contact" id="contact">
       <h1>RSVP</h1>
-      <form
+      <h2>The form has been closed</h2>
+      {/* <form
         name="rsvp"
         method="POST"
         action="/success"
@@ -55,7 +54,7 @@ const Contact = () => {
         <button className="button form-button" type="submit">
           Send
         </button>
-      </form>
+      </form> */}
     </section>
   );
 };
