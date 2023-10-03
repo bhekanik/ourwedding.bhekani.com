@@ -18,8 +18,8 @@ dependencies:
     specifier: 3.0.1
     version: 3.0.1(eslint@5.16.0)(react@18.2.0)(typescript@5.1.6)
   snyk:
-    specifier: ^1.1216.0
-    version: 1.1216.0
+    specifier: ^1.1228.0
+    version: 1.1228.0
 
 packages:
 
@@ -4680,14 +4680,6 @@ packages:
       ip-regex: 2.1.0
     dev: false
 
-  /define-properties@1.1.4:
-    resolution: {integrity: sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      has-property-descriptors: 1.0.0
-      object-keys: 1.1.1
-    dev: false
-
   /define-properties@1.2.0:
     resolution: {integrity: sha512-xvqAVKGfT1+UAvPwKTVw/njhdQ8ZhXK4lI0bCIuCMrp2up9nPnaDftrLtmpTazqd1o+UY4zgzU+avtMbDP+ldA==}
     engines: {node: '>= 0.4'}
@@ -6055,7 +6047,7 @@ packages:
     resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-properties: 1.1.4
+      define-properties: 1.2.0
     dev: false
 
   /globby@6.1.0:
@@ -10541,8 +10533,8 @@ packages:
       - supports-color
     dev: false
 
-  /snyk@1.1216.0:
-    resolution: {integrity: sha512-xVEiPPyVenHZ2DKSK/tbHolatcMDlW0QCs/0ZNPhNqxSYzX65mKkL9+R4rxRXyeYckfq69gSDMTTuBf9c5zFqQ==}
+  /snyk@1.1228.0:
+    resolution: {integrity: sha512-DLPcGazN+F7sR8v2ABCvsSLifOLoW1Episyu4De9Ho8x+EXgX8sTlbI9LkmL5dndY7bmWxaQ6w0qsvXZQNB4dA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
