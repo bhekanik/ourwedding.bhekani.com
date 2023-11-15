@@ -18,8 +18,8 @@ dependencies:
     specifier: 3.2.0
     version: 3.2.0(eslint@6.8.0)(react@18.2.0)(typescript@5.1.6)
   snyk:
-    specifier: ^1.1237.0
-    version: 1.1237.0
+    specifier: ^1.1246.0
+    version: 1.1246.0
 
 packages:
 
@@ -10832,8 +10832,8 @@ packages:
       - supports-color
     dev: false
 
-  /snyk@1.1237.0:
-    resolution: {integrity: sha512-LeWa1eLXHVk4hQjDMWaTJKD+eGRwhgUD6r7DafGyg8/EpWR1XoTGVIeQAfFX5QUjl9mB1IpMl8qumBUioi+0OQ==}
+  /snyk@1.1246.0:
+    resolution: {integrity: sha512-PP48m4M1WHH13NdhZVNg8hrE+zHBvuKx5JmQs/c39Cvr4QDyHpiOE4Ku/SQzQm4137o67QIEyvVHCG8ZSoPr9Q==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
