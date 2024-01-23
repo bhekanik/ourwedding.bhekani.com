@@ -7,7 +7,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "react-scripts": "3.2.0",
-    "snyk": "^1.1237.0"
+    "snyk": "^1.1274.0"
   },
   "scripts": {
     "start": "react-scripts start",
