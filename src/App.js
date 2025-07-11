@@ -1,5 +1,5 @@
 import React, { useReducer, createContext } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
@@ -70,13 +70,13 @@ const App = () => {
           boxShadow={state.boxShadow}
           page={state.page}
         />
-        <Switch>
-          <Route exact path="/" render={() => <Home page={state.page} />} />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/success" component={Success} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home page={state.page} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/success" element={<Success />} />
+        </Routes>
         <div className="footer-spacer"></div>
         <Footer />
       </div>
