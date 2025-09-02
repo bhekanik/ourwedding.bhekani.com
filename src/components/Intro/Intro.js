@@ -15,10 +15,10 @@ const Intro = () => {
         />
       </div>
       <div className="intro-middle">
-        <h2>{"Join Us!"}</h2>
+        <h2>{"Our Journey"}</h2>
         <p>
           {
-            "We are excited to invite you to join us as we begin building our new future together. Each one of you plays a unique role in our lives, sharing with us memories we will always treasure. So we hope you can join us for yet another unforgettable moment, as we exchange vows and make a lasting commitment to one another."
+            "Thank you for being part of our journey as we build our future together. Each one of you played a unique role in our special day, sharing with us memories we will always treasure. We are grateful for the unforgettable moment when we exchanged vows and made our lasting commitment to one another."
           }
         </p>
         <p style={{ color: "#e8e9eb" }}>{"#BKWedsNobue"}</p>
@@ -29,7 +29,7 @@ const Intro = () => {
               href="https://www.facebook.com/justlivinlife"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Link to Facebook profile"
+              title="Link to Facebook profile"
             >
               <img src={facebookLogo} alt="Facebook Icon" />
             </a>
@@ -38,7 +38,7 @@ const Intro = () => {
               href="https://instagram.com/justlivinlifeonig"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Link to Instagram profile"
+              title="Link to Instagram profile"
             >
               <img src={instagramLogo} alt="Instagram Icon" />
             </a>
@@ -47,7 +47,7 @@ const Intro = () => {
               href="https://twitter.com/justlivinlifepc"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Link to Twitter profile"
+              title="Link to Twitter profile"
             >
               <img src={twitterLogo} alt="Twitter Icon" />
             </a>
@@ -56,7 +56,7 @@ const Intro = () => {
               href="https://www.youtube.com/channel/UCNNaw5_xYuNle7jUU5Y8mmQ"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Link to Youtube profile"
+              title="Link to Youtube profile"
             >
               <img src={youtubeLogo} alt="Youtube Icon" />
             </a>
