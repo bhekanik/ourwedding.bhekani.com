@@ -4,36 +4,62 @@
 .countdown {
   display: flex;
   margin: 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .timeLabel {
   font-size: 1.5rem;
   font-family: 'Roboto Condensed', sans-serif;
-  margin: 0 10px;
+  margin: 0;
   border: 1px solid var(--clr-background-light);
   border-radius: 10px;
   padding: 10px 20px;
   opacity: 0.7;
   background: var(--clr-primary);
   line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
 }
 
-.timeLabel:first-of-type {
+.timeLabel.celebrating,
+.timeLabel.of-marriage {
+  background: transparent;
+  border: none;
+  opacity: 1;
   font-weight: 600;
+  padding: 10px;
 }
 
 .timeLabel span {
   display: block;
   font-size: 0.75rem;
+  margin-top: 5px;
 }
 
 @media (max-width: 30rem) {
+  .countdown {
+    gap: 5px;
+  }
+  
   .timeLabel {
     font-size: 5vw;
-    margin: 0 1.5vw;
+    padding: 8px 12px;
+    min-height: 45px;
+  }
+  
+  .timeLabel.celebrating,
+  .timeLabel.of-marriage {
+    padding: 5px;
   }
 
   .timeLabel span {
     font-size: 2.5vw;
+    margin-top: 2px;
   }
 }
