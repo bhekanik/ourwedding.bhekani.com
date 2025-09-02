@@ -2,15 +2,58 @@ nav {
   position: fixed;
   display: flex;
   justify-content: center;
-  background: white;
-
   top: 0;
   right: 0;
   left: 0;
   z-index: 999;
-
   transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Transparent theme (over hero) */
+.navbar--transparent {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+}
+
+.navbar--transparent a {
+  color: #e8e9eb;
+}
+
+.navbar--transparent li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar--transparent li:hover a {
+  color: white;
+}
+
+.navbar--transparent a.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+/* Solid theme (scrolled or other pages) */
+.navbar--solid {
+  background: white;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar--solid a {
+  color: #223843;
+}
+
+.navbar--solid li:hover {
+  background: var(--clr-primary);
+}
+
+.navbar--solid li:hover a {
+  color: white;
+}
+
+.navbar--solid a.active {
+  color: var(--clr-primary);
+  border-bottom: 2px solid var(--clr-primary);
 }
 
 nav ul {
@@ -18,6 +61,8 @@ nav ul {
   justify-content: center;
   list-style: none;
   background: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
@@ -27,18 +72,9 @@ nav ul {
   width: 10vw;
 }
 
-.navbar li:hover {
-  background: var(--clr-primary);
-}
-
-.navbar li:hover a {
-  color: white;
-}
-
 .navbar a {
   font-size: 1.4vw;
   letter-spacing: 0.15em;
-  color: #223843;
   text-transform: uppercase;
   line-height: 1;
   font-family: "Roboto Condensed", sans-serif;
@@ -46,6 +82,8 @@ nav ul {
   text-decoration: none;
   width: 100%;
   padding: 20px 0;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 @media (max-width: 50em) {
@@ -53,7 +91,17 @@ nav ul {
     bottom: 0;
     top: initial;
     border-top: 0.5px solid #223843;
+  }
+  
+  .navbar--transparent,
+  .navbar--solid {
+    background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar--transparent a,
+  .navbar--solid a {
+    color: #223843;
   }
 
   .navbar li {
@@ -68,5 +116,10 @@ nav ul {
   .navbar a {
     font-size: 3vw;
     font-weight: 900;
+  }
+  
+  .navbar a.active {
+    color: var(--clr-primary);
+    border-bottom: none;
   }
 }

@@ -5,21 +5,12 @@ import CallToAction from "../CallToAction/CallToAction";
 import "./about.css";
 
 const About = () => {
-  const dispatch = useContext(Context);
+  const { setNavTheme, setCurrentPage } = useContext(Context);
 
   useEffect(() => {
-    dispatch({ type: "page", payload: "about" });
-    dispatch({
-      type: "nav",
-      payload: {
-        navBackgroundColor: "white",
-        detailsLinkColor: "#e8e9eb",
-        homeLinkColor: "#223843",
-        contactLinkColor: "#223843",
-        boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
-      },
-    });
-  }, [dispatch]);
+    setCurrentPage("about");
+    setNavTheme("solid");
+  }, [setNavTheme, setCurrentPage]);
 
   return (
     <>

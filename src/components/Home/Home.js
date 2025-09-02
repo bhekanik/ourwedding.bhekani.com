@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Context } from "../../App";
 import arrow from "../../img/arrow.svg";
 import CallToAction from "../CallToAction/CallToAction";
@@ -6,93 +6,98 @@ import Countdown from "../Countdown/Countdown";
 import Intro from "../Intro/Intro";
 import "./home.css";
 
-const Home = (props) => {
-  const dispatch = useContext(Context);
-
-  const changeNavStyle = () => {
-    if (window.outerWidth > 800) {
-      if (
-        document.querySelector(".intro").getBoundingClientRect().top - 60 >
-        0
-      ) {
-        dispatch({
-          type: "nav",
-          payload: {
-            navBackgroundColor: "rgba(0,0,0,0.3)",
-            homeLinkColor: "#e8e9eb",
-            detailsLinkColor: "#e8e9eb",
-            contactLinkColor: "#e8e9eb",
-            boxShadow: "none",
-          },
-        });
-      } else {
-        dispatch({
-          type: "nav",
-          payload: {
-            navBackgroundColor: "white",
-            boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
-          },
-        });
-      }
-    } else {
-      dispatch({
-        type: "nav",
-        payload: {
-          navBackgroundColor: "white",
-          boxShadow: "0 10px 10px -10px rgba(0, 0, 0, 0.5)",
-        },
-      });
-    }
-  };
+const Home = () => {
+  const { setNavTheme, setCurrentPage } = useContext(Context);
+  const introRef = useRef(null);
 
   useEffect(() => {
-    dispatch({ type: "page", payload: "home" });
+    setCurrentPage("home");
 
-    changeNavStyle();
-
-    window.addEventListener("scroll", changeNavStyle);
-    window.addEventListener("resize", changeNavStyle);
-
-    return () => {
-      window.removeEventListener("scroll", changeNavStyle);
+    // Use Intersection Observer for better performance
+    const observerOptions = {
+      root: null,
+      rootMargin: '-60px 0px 0px 0px',
+      threshold: 0,
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
-  const smoothScroll = (targetSelector, duration) => {
-    const target = document.querySelector(targetSelector);
-    const getTargetPosition = () => {
-      if (window.outerWidth > 800) {
-        return target.getBoundingClientRect().top - 50;
-      } else {
-        return target.getBoundingClientRect().top;
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (window.outerWidth > 800) {
+          if (entry.isIntersecting) {
+            setNavTheme("transparent");
+          } else {
+            setNavTheme("solid");
+          }
+        } else {
+          setNavTheme("solid");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+    
+    // Wait for intro element to be available
+    const checkAndObserve = () => {
+      const introElement = document.querySelector('.intro');
+      if (introElement) {
+        observer.observe(introElement);
       }
     };
-    const startPosition = window.pageYOffset;
-    const distance = getTargetPosition();
-    let startTime = null;
+    
+    // Try immediately and with a small delay as fallback
+    checkAndObserve();
+    const timeoutId = setTimeout(checkAndObserve, 100);
 
-    const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-
-      if (timeElapsed < duration) requestAnimationFrame(animation);
+    // Handle resize events with throttling
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const introElement = document.querySelector('.intro');
+        if (introElement) {
+          const rect = introElement.getBoundingClientRect();
+          if (window.outerWidth > 800) {
+            if (rect.top > 60) {
+              setNavTheme("transparent");
+            } else {
+              setNavTheme("solid");
+            }
+          } else {
+            setNavTheme("solid");
+          }
+        }
+      }, 150);
     };
 
-    function ease(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
+    window.addEventListener("resize", handleResize);
+
+    // Initial style
+    if (window.outerWidth <= 800) {
+      setNavTheme("solid");
+    } else {
+      setNavTheme("transparent");
     }
 
-    requestAnimationFrame(animation);
-  };
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(resizeTimeout);
+      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setNavTheme, setCurrentPage]);
 
-  const smoothScrollRunner = () => {
-    smoothScroll(".intro", 1000);
+  const scrollToIntro = () => {
+    const introElement = document.querySelector('.intro');
+    if (introElement) {
+      const offset = window.outerWidth > 800 ? 50 : 0;
+      const elementPosition = introElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -108,11 +113,12 @@ const Home = (props) => {
         <img
           className="welcome-down"
           src={arrow}
-          alt=""
-          onClick={smoothScrollRunner}
+          alt="Scroll down"
+          onClick={scrollToIntro}
+          style={{ cursor: 'pointer' }}
         />
       </div>
-      <Intro />
+      <Intro ref={introRef} />
       <div className="tech">
         <h2>{"Some quick details"}</h2>
         <p>
