@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../../App";
-import wrapistryLogo from "../../img/wrapistry.svg";
 import CallToAction from "../CallToAction/CallToAction";
 import "./about.css";
 
@@ -45,39 +44,6 @@ const About = () => {
                   <span className="boldSpan">Reception</span> Mystique Weddings
                   & Conferences, Mariot Road, Four Winds, Bulawayo | 2:00pm
                 </p>
-              </div>
-            </div>
-
-            <div className="details__bridesmaids">
-              <div className="subtitle">
-                <p>Wedding Registry</p>
-              </div>
-
-              <div className="registry-desc desc">
-                <p>
-                  We have set up a gift registry for those who would like to
-                  celebrate the occassion with a gift but won't be able to make
-                  it for the wedding in person. You can find our gift registry
-                  by clicking the image below:
-                </p>
-                <div>
-                  <a
-                    href="https://wrapistry.shop/giftregistry/?giftregistry_id=1393"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <figure className="registry-figure">
-                      <img
-                        className="registry-img"
-                        src={wrapistryLogo}
-                        alt="Wrapistry Logo"
-                      ></img>
-                      <figcaption className="registry-img-caption">
-                        BK and Nobue's Wedding Registry
-                      </figcaption>
-                    </figure>
-                  </a>
-                </div>
               </div>
             </div>
 

@@ -40,13 +40,11 @@ const Countdown = () => {
 
   return (
     <div className="countdown">
-      <p className="timeLabel">Celebrating</p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        <p className="timeLabel">{timeSince.years} <span>Years</span></p>
-        <p className="timeLabel">{timeSince.months} <span>Months</span></p>
-        <p className="timeLabel">{timeSince.days} <span>Days</span></p>
-      </div>
-      <p className="timeLabel">of Marriage!</p>
+      <p className="timeLabel celebrating">Celebrating</p>
+      <p className="timeLabel">{timeSince.years} <span>Years</span></p>
+      <p className="timeLabel">{timeSince.months} <span>Months</span></p>
+      <p className="timeLabel">{timeSince.days} <span>Days</span></p>
+      <p className="timeLabel of-marriage">of Marriage!</p>
     </div>
   );
 };
