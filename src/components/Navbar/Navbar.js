@@ -1,76 +1,44 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-
-import { Context } from "../../App";
-
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 
-const Navbar = props => {
-  const dispatch = useContext(Context);
-  const { navbackgroundColor, homeLinkColor, detailsLinkColor, contactLinkColor, boxShadow, page } = props;
+const Navbar = ({ navTheme, currentPage }) => {
+  const location = useLocation();
+  
+  const getActivePage = () => {
+    const path = location.pathname;
+    if (path === '/about') return 'details';
+    if (path === '/contact') return 'contact';
+    return 'home';
+  };
 
-  const handleHover = (link, coloOfLink) => {
-    const linkDispatch = (dispatchType, linkColor) => {      
-      dispatch({
-        type: dispatchType,
-        payload: {
-          linkColor
-        }
-      });
-    }
-
-    if (page !== "home") {
-      if (link === "home") {
-        linkDispatch("homeLink", coloOfLink);
-      } else if (link === "details") {
-        linkDispatch("detailsLink", coloOfLink);
-      } else if (link === "contact") {        
-        linkDispatch("contactLink", coloOfLink);
-      }
-    } else {
-      if (window.outerWidth > 800) {
-        if (
-          document.querySelector(".intro").getBoundingClientRect().top - 60 <=
-          0
-        ) {
-          if (link === "home") {
-            linkDispatch("homeLink", coloOfLink);
-          } else if (link === "details") {
-            linkDispatch("detailsLink", coloOfLink);
-          } else if (link === "contact") {        
-            linkDispatch("contactLink", coloOfLink);
-          }
-        }
-      } else {
-        if (link === "home") {
-          linkDispatch("homeLink", coloOfLink);
-        } else if (link === "details") {
-          linkDispatch("detailsLink", coloOfLink);
-        } else if (link === "contact") {        
-          linkDispatch("contactLink", coloOfLink);
-        }
-      }
-    }
-  }
+  const activePage = getActivePage();
 
   return (
-    <nav
-      className="navbar"
-      style={{ background: navbackgroundColor, boxShadow: boxShadow }}>
+    <nav className={`navbar navbar--${navTheme}`}>
       <ul>
-        <li onClick={() => handleHover("home", "#e8e9eb")} onMouseEnter={() => handleHover("home", "#e8e9eb")} onMouseLeave={() => handleHover("home", "#223843")}>
-          <Link style={{ color: homeLinkColor }} to="/">
+        <li>
+          <Link 
+            to="/" 
+            className={activePage === 'home' ? 'active' : ''}
+          >
             Home
           </Link>
         </li>
-        <li onClick={() => handleHover("details")} onMouseEnter={() => handleHover("details", "#e8e9eb")} onMouseLeave={() => handleHover("details", "#223843")}>
-          <Link style={{ color: detailsLinkColor }} to="/about">
+        <li>
+          <Link 
+            to="/about"
+            className={activePage === 'details' ? 'active' : ''}
+          >
             Details
           </Link>
         </li>
-        <li onClick={() => handleHover("contact")} onMouseEnter={() => handleHover("contact", "#e8e9eb")} onMouseLeave={() => handleHover("contact", "#223843")}>
-          <Link style={{ color: contactLinkColor }} to="/contact">
-            RSVP
+        <li>
+          <Link 
+            to="/contact"
+            className={activePage === 'contact' ? 'active' : ''}
+          >
+            Thank You
           </Link>
         </li>
       </ul>

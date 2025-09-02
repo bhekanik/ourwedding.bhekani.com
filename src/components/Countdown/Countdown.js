@@ -1,42 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./countdown.css";
 
 const Countdown = () => {
+  const [timeSince, setTimeSince] = useState({
+    years: 0,
+    months: 0,
+    days: 0
+  });
+
   useEffect(() => {
-    const countdown = document.querySelector(".countdown");
-
-    const weddingDate = new Date("Oct 6, 2019 10:00:00").getTime();
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-
-      const timeRemaining = weddingDate - now;
-
-      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const mins = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `
-        <p class="timeLabel">${days} <span>Days</span></p>
-        <p class="timeLabel">${hours} <span>Hours</span></p>
-        <p class="timeLabel">${mins} <span>Minutes</span></p>
-        <p class="timeLabel">${secs} <span>Seconds</span></p>
-      `;
-
-      if (weddingDate < 0) {
-        clearInterval(interval);
-        countdown.style.color = "var(--clr-accent)";
-        countdown.innerHTML = "It is here!";
+    const weddingDate = new Date("Oct 6, 2019 10:00:00");
+    
+    const calculateTimeSince = () => {
+      const now = new Date();
+      
+      let years = now.getFullYear() - weddingDate.getFullYear();
+      let months = now.getMonth() - weddingDate.getMonth();
+      let days = now.getDate() - weddingDate.getDate();
+      
+      if (days < 0) {
+        months--;
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
       }
-    }, 1000);
-
+      
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+      
+      setTimeSince({ years, months, days });
+    };
+    
+    calculateTimeSince();
+    const interval = setInterval(calculateTimeSince, 86400000); // Update daily
+    
     return () => clearInterval(interval);
   }, []);
 
-  return <div className="countdown"></div>;
+  return (
+    <div className="countdown">
+      <p className="timeLabel">Celebrating</p>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+        <p className="timeLabel">{timeSince.years} <span>Years</span></p>
+        <p className="timeLabel">{timeSince.months} <span>Months</span></p>
+        <p className="timeLabel">{timeSince.days} <span>Days</span></p>
+      </div>
+      <p className="timeLabel">of Marriage!</p>
+    </div>
+  );
 };
 
 export default Countdown;
